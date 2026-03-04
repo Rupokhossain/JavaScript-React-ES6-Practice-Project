@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Weather App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #2c3e50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+      }
+      .weather-card {
+        background: #34495e;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        width: 300px;
+      }
+      h1 {
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+      }
+      .temp {
+        font-size: 4rem;
+        font-weight: bold;
+        margin: 15px 0;
+        color: #f1c40f;
+      }
+      .info {
+        font-size: 1.1rem;
+        color: #bdc3c7;
+      }
+      button {
+        background: #e67e22;
+        border: none;
+        padding: 10px 20px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .loading {
+        display: none;
+        font-style: italic;
+        color: #ecf0f1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="weather-card">
+      <h1>Dhaka, Bd</h1>
+      <div id="loader" class="loading">Loading weather...</div>
+      <div id="weather-info">
+        <p class="temp" id="temperature">--°C</p>
+        <p class="info" id="windspeed">Wind: --km/h</p>
+      </div>
+      <button id="refreshBtn">Update Weather</button>
+    </div>
+
+    <!-- js file -->
+     <script src="./weatherApi.js"></script>
+  </body>
+</html>
